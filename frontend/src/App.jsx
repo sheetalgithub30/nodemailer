@@ -17,7 +17,7 @@ function App() {
       });
       console.log(response)
 
-      if(response.status == 200 && response.statusText == 'OK'){
+      if(response.status == 250 && response.statusText == 'OK'){
           setSend(true);
       }
     } catch (e) {
