@@ -19,6 +19,8 @@ function App() {
       if (response.status === 200 && response.statusText === "Ok") {
         setDataSaved(!dataSaved);
       }
+      setDataSaved(!dataSaved);
+
     } catch (e) {
       console.log(e);
     }
