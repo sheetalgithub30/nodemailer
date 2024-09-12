@@ -7,22 +7,19 @@ function App() {
   const [message, setMessage] = useState("");
   const[send,setSend] = useState(false)
 
-  async function handle(e) {
+ function handle(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_RENDER}/sendEmail`, {
+       axios.post(`${import.meta.env.VITE_RENDER}/sendEmail`, {
         name,
         email,
         message,
       });
-      console.log(response)
-
-      if(response.statusText == 'OK'){
-          setSend(true);
-      }
     } catch (e) {
       console.log(e);
     }
+
+    setSend(true);
   }
 
   return (
